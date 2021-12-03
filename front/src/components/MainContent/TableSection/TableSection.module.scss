@@ -1,0 +1,28 @@
+.mainContent {
+  height: 640px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 10px;
+
+  .sectionHeader {
+    position: relative;
+    background-color: steelblue;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    min-width: 250px;
+    height: 30px;
+
+    .sectionHeader__name {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%)
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .mainContent {
+    height: 315px;
+  }
+}

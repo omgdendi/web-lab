@@ -1,0 +1,26 @@
+.fieldContainer {
+
+  border-radius: 4px;
+
+  .name {
+    background-color: steelblue;
+    padding: 3px;
+    border-radius: 4px 0 0 4px;
+    color: white;
+    font-size: 16px;
+  }
+
+  .inputField {
+    border: 1px solid steelblue;
+    height: 20px;
+    border-radius: 0 4px 4px 0;
+    transform: translate(0, -8%);
+
+    &:before {
+
+    }
+    &:focus {
+      outline: none
+    }
+  }
+}

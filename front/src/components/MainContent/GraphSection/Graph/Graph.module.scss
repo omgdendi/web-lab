@@ -1,0 +1,17 @@
+.graphContainer {
+  position: relative;
+  width: 220px;
+
+  .canvas {
+    position: absolute;
+    left: 0;
+  }
+
+  .clickCanvas {
+    position: absolute;
+    left: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

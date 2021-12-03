@@ -1,0 +1,51 @@
+.content {
+  text-align: center;
+  .message {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .formContent {
+    width: 170px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    .inputField {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .radio {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+
+      button {
+        width: 80px;
+        height: 25px;
+        text-align: center;
+        border: 1px solid;
+        border-radius: 10px;
+        background-color: steelblue;
+        color: white;
+        opacity: 75%;
+
+        &:hover:not(:disabled) {
+          opacity: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
