@@ -5,7 +5,7 @@ import {useEffect} from "react";
 import MainContent from "./MainContent/MainContent";
 import HeaderContainer from "./Header/HeaderContainer";
 import Preloader from "./Preloader/Preloader";
-import {Route, Switch} from "react-router-dom";
+import {Redirect, Route, Switch} from "react-router-dom";
 
 const App = (props) => {
     useEffect(() => {
@@ -32,6 +32,7 @@ const App = (props) => {
                 <Route exact path={"/web-lab/registration"}>
                     <AuthContent/>
                 </Route>
+                <Redirect from={"*"} to={"/web-lab/login"} />
             </Switch>
         </div>
     )
@@ -42,6 +43,7 @@ const App = (props) => {
                 <Route path="/web-lab/main">
                     <MainContent/>
                 </Route>
+                <Redirect from={"*"} to={"/web-lab/main"} />
             </Switch>
         </div>
     );
