@@ -44,7 +44,9 @@ const Login = (props) => {
                  <span className={styles.link} onClick={toRegister}>
                      <Link to="/web-lab/registration">Нет аккаунта?</Link>
                  </span>
-                <button onClick={() => props.login(login, password)}>Войти</button>
+                <Link to={"/web-lab/main"}>
+                    <button onClick={() => props.login(login, password)}>Войти</button>
+                </Link>
             </div>
         </div>
     )

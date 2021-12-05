@@ -5,7 +5,7 @@ import {useEffect} from "react";
 import MainContent from "./MainContent/MainContent";
 import HeaderContainer from "./Header/HeaderContainer";
 import Preloader from "./Preloader/Preloader";
-import {Routes, Route, Navigate} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 
 const App = (props) => {
     useEffect(() => {
@@ -24,22 +24,25 @@ const App = (props) => {
     }
     if (!props.isAuth) return (
         <div>
-            <Navigate to={"/web-lab/login"}/>
             <HeaderContainer/>
-            <Routes>
-                <Route path="web-lab/login" element={<AuthContent/>}/>
-                <Route path="*" element={<AuthContent/>}/>
-            </Routes>
+            <Switch>
+                <Route exact path={"/web-lab/login"}>
+                    <AuthContent/>
+                </Route>
+                <Route exact path={"/web-lab/registration"}>
+                    <AuthContent/>
+                </Route>
+            </Switch>
         </div>
     )
     else return (
         <div>
-            <Navigate to={"/web-lab/main"}/>
             <HeaderContainer/>
-            <Routes>
-                <Route path="/web-lab/main" element={<MainContent/>}/>
-                <Route path="*" element={<MainContent/>}/>
-            </Routes>
+            <Switch>
+                <Route path="/web-lab/main">
+                    <MainContent/>
+                </Route>
+            </Switch>
         </div>
     );
 }
